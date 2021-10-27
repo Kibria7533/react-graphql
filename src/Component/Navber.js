@@ -1,18 +1,13 @@
-
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Navber from './Component/Navber';
-import Form  from "./Component/Form";
-import Table from './Component/Table'
-
-function App() {
-  return (
-    <Router>
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+class Navber extends React.Component {
+    render() { 
+        return  <Router> <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,18 +25,8 @@ function App() {
           </div>
         </div>
       </nav>
-        <Switch>
-          <Route exact path="/">
-            <Table />
-          </Route>
-          <Route exact path="/form">
-            <Form />
-          </Route>
-        
-        </Switch>
-      
-    </Router>
-  );
+      </Router>;
+    }
 }
-
-export default App;
+ 
+export default Navber;
